@@ -2,3 +2,42 @@
   font-family: sans-serif;
   text-align: center;
 }
+
+body {
+  background-color: rgb(156, 184, 245);
+}
+
+header {
+  width: 100%;
+  border-bottom: 8px solid #07244ba1;
+  background: url("./media/banner.jpeg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+footer {
+  margin-top: 40px;
+}
+
+h1 {
+  color: #07244b;
+  font-family: arial, sans-serif;
+  font-size: 35px;
+  font-weight: bold;
+  margin-top: 0px;
+  margin-bottom: 30px;
+}
+
+ul {
+  font-size: 20px;
+  display: table;
+  margin: 0 auto;
+}
+
+li {
+  margin-bottom: 5px;
+  list-style-type: decimal;
+}
+
+input {
+  font-size: 20px;
+}

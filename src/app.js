@@ -1,12 +1,19 @@
 import React from "react";
 import "./styles.css";
 import TodoForm from "./components/todoForm";
+import TodoList from "./components/todoList";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      todos: ["Winch Cleaning", "Anchorlight LED Upgrade", "Radio installation"]
+      todos: [
+        "Winch Cleaning",
+        "LED Upgrade",
+        "Radio installation",
+        "Cockpit cleaning",
+        "AIS compatibilty"
+      ]
     };
     this.addTodo = this.addTodo.bind(this);
     this.deleteTodo = this.deleteTodo.bind(this);
@@ -27,24 +34,26 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <h1>Todos</h1>
-        <TodoList todos={this.state.todos} deleteTodo={this.deleteTodo} />
-        <TodoForm addTodo={this.addTodo} />
+        <header>
+          <h1>Todos</h1>
+        </header>
+
+        <main>
+          <TodoList todos={this.state.todos} deleteTodo={this.deleteTodo} />
+          <TodoForm addTodo={this.addTodo} />
+        </main>
+        <footer>
+          <img
+            id="footerMotivation"
+            src="https://thumbs.dreamstime.com/b/rough-sea-coast-rocky-empty-beach-north-portugal-typical-sky-rain-90817303.jpg"
+            alt="Make dreams come true!"
+            width="500"
+            height="300"
+          />
+        </footer>
       </div>
     );
   }
 }
-
-const Todo = (props) => (
-  <li onClick={() => props.deleteTodo(props.todo)}>{props.todo}</li>
-);
-
-const TodoList = (props) => (
-  <ul>
-    {props.todos.map((todo) => (
-      <Todo todo={todo} key={todo} deleteTodo={props.deleteTodo} />
-    ))}
-  </ul>
-);
 
 export default App;
