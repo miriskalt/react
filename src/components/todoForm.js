@@ -5,13 +5,14 @@ class TodoForm extends React.Component {
     super(props);
     this.state = { todoInput: "" };
   }
+
   handleChange = (event) => {
     this.setState({ todoInput: event.target.value });
   };
 
-  handleSumbit = (event) => {
-    event.preventDefautl();
-    alert("A todo was added: {this.state.todoInput}");
+  handleSubmit = (event) => {
+    event.preventDefault();
+    this.props.addTodo(this.state.todoInput); // Add the new todo to the list
   };
 
   render() {
