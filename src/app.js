@@ -35,7 +35,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <header>
-          <h1>Todos</h1>
+          <h1>List Of Open Todos</h1>
         </header>
 
         <main>

@@ -38,6 +38,26 @@ li {
   list-style-type: decimal;
 }
 
-input {
+input[type="text"] {
   font-size: 20px;
+  color: white;
+  background-color: #07244ba3;
+  border-radius: 10px;
+}
+
+input::placeholder {
+  color: white;
+}
+
+input[type="submit"] {
+  background-color: #07244ba3;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  border-radius: 10px;
+  margin-left: 15px;
 }
